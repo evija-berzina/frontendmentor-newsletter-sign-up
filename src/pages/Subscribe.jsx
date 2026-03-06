@@ -20,59 +20,63 @@ export function Subscribe() {
   }
 
   return (
-    <main>
+    <main className="bg-[hsl(var(--white))]">
       <picture>
         <source media="(min-width:650px)" srcSet={desktopSvg} />
         <source media="(min-width:465px)" srcSet={tabletSvg} />
         <img src={mobileSvg} alt="Newsletter illustration" />
       </picture>
+      <section className="flex flex-col gap-6 px-6 py-8">
+        <h1 className="text-4xl font-bold">
+          Stay updated!
+        </h1>
 
-      <h1>
-        Stay updated!
-      </h1>
+        <p>
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
 
-      <p>
-        Join 60,000+ product managers receiving monthly updates on:
-      </p>
-
-      <ul>
-        <li>
+        <ul className="flex flex-col gap-4">
+          <li className="flex gap-4 items-start mt-1">
+              <img src={iconSvg} alt="Icon checkmark for list" />
+              <p>
+                Product discovery and building what matters
+              </p>
+          </li>
+          <li className="flex gap-4 items-start mt-1">
             <img src={iconSvg} alt="Icon checkmark for list" />
             <p>
-              Product discovery and building what matters
+              Measuring to ensure updates are a success
             </p>
-        </li>
-        <li>
-          <img src={iconSvg} alt="Icon checkmark for list" />
-          <p>
-            Measuring to ensure updates are a success
-          </p>
-        </li>
-        <li>
-          <img src={iconSvg} alt="Icon checkmark for list" />
-          <p>
-            And much more!
-          </p>
-        </li>
-      </ul>
+          </li>
+          <li className="flex gap-4 items-start mt-1">
+            <img src={iconSvg} alt="Icon checkmark for list" />
+            <p>
+              And much more!
+            </p>
+          </li>
+        </ul>
 
-      <form onSubmit={handleSubmit} id="subscribe-form">
-        <label htmlFor="email">Email address</label>
+        <form className="flex flex-col gap-5" onSubmit={handleSubmit} id="subscribe-form">
+          <div className="flex flex-col gap-2">
+            <label className="text-xs font-bold" htmlFor="email">Email address</label>
+         
+            <input
+            className="border border-gray-300 px-4 py-3 rounded-md"
+              type="email"
+              id="email"
+              placeholder="email@company.com"
+              autoComplete="email"
+              value={email}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <input
-          type="email"
-          id="email"
-          placeholder="email@company.com"
-          autoComplete="email"
-          value={email}
-          onChange={handleChange}
-          required
-        />
-
-        <button type="submit">
-          Subscribe to monthly newsletter
-        </button>
-      </form>
+          <button className="bg-[hsl(var(--blue-800))] text-[hsl(var(--white))] font-bold px-4 py-3 rounded-md" type="submit">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </section>
     </main>
   );
 }

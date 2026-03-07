@@ -20,13 +20,13 @@ export function Subscribe() {
   }
 
   return (
-    <main className="bg-[hsl(var(--white))]">
-      <picture>
-        <source media="(min-width:650px)" srcSet={desktopSvg} />
-        <source media="(min-width:465px)" srcSet={tabletSvg} />
-        <img src={mobileSvg} alt="Newsletter illustration" />
+    <main className="flex flex-col bg-[hsl(var(--white))] sm:max-w-xl sm:my-8 sm:p-8 sm:rounded-2xl lg:flex-row lg:flex-row-reverse lg:gap-8 lg:max-w-4xl">
+      <picture className="flex-1">
+        <source media="(min-width:1024px)" srcSet={desktopSvg} />
+        <source media="(min-width:640px)" srcSet={tabletSvg} />
+        <img src={mobileSvg} alt="Newsletter illustration" className="w-full object-cover" />
       </picture>
-      <section className="flex flex-col gap-6 px-6 py-8">
+      <section className="flex flex-col flex-1 gap-6 px-6 py-8 lg:justify-center">
         <h1 className="text-4xl font-bold">
           Stay updated!
         </h1>
@@ -61,7 +61,7 @@ export function Subscribe() {
             <label className="text-xs font-bold" htmlFor="email">Email address</label>
          
             <input
-            className="border border-gray-300 px-4 py-3 rounded-md"
+            className="border border-gray-300 px-4 py-4 rounded-md"
               type="email"
               id="email"
               placeholder="email@company.com"
@@ -72,7 +72,7 @@ export function Subscribe() {
             />
           </div>
 
-          <button className="bg-[hsl(var(--blue-800))] text-[hsl(var(--white))] font-bold px-4 py-3 rounded-md" type="submit">
+          <button className="bg-[hsl(var(--blue-800))] text-[hsl(var(--white))] font-bold px-4 py-4 rounded-md" type="submit">
             Subscribe to monthly newsletter
           </button>
         </form>

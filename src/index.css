@@ -22,6 +22,7 @@
 
 :root {
 --red: 4 100% 67%;
+--pink: 331 100% 50%;
 --blue-800: 234 29% 20%;
 --blue-700: 235 18% 26%;
 --grey: 0 0% 58%;
@@ -35,4 +36,29 @@ body {
   font-family: var(--ff-roboto);
   color: hsl(var(--blue-800));
   font-size: var(--fs-100);
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative text-white font-bold px-4 py-4 rounded-md overflow-hidden cursor-pointer;
+    background: hsl(var(--blue-800));
+  }
+
+  .btn-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, hsl(var(--pink)), hsl(var(--red)));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .btn-primary:hover::before {
+    opacity: 1;
+  }
+
+  .btn-primary span {
+    position: relative;
+    z-index: 1;
+  }
 }

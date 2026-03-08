@@ -20,7 +20,7 @@ export function Subscribe() {
   }
 
   return (
-    <main className="flex flex-col bg-[hsl(var(--white))] sm:max-w-xl sm:my-8 sm:p-8 sm:rounded-2xl lg:flex-row lg:flex-row-reverse lg:gap-8 lg:max-w-4xl">
+    <main className="flex flex-col bg-[hsl(var(--white))] sm:max-w-xl sm:my-8 sm:p-8 sm:rounded-2xl lg:flex-row-reverse lg:gap-8 lg:max-w-4xl">
       <picture className="flex-1">
         <source media="(min-width:1024px)" srcSet={desktopSvg} />
         <source media="(min-width:640px)" srcSet={tabletSvg} />
@@ -61,7 +61,7 @@ export function Subscribe() {
             <label className="text-xs font-bold" htmlFor="email">Email address</label>
          
             <input
-            className="border border-gray-300 px-4 py-4 rounded-md"
+            className="shadow-[inset_0_0_0_1px_hsl(var(--grey))] hover:shadow-[inset_0_0_0_2px_hsl(var(--blue-800))] px-4 py-4 rounded-md cursor-pointer focus:outline-none focus:shadow-[inset_0_0_0_2px_hsl(var(--blue-800))] transition-shadow duration-300 ease-in-out"
               type="email"
               id="email"
               placeholder="email@company.com"
@@ -72,8 +72,8 @@ export function Subscribe() {
             />
           </div>
 
-          <button className="bg-[hsl(var(--blue-800))] text-[hsl(var(--white))] font-bold px-4 py-4 rounded-md" type="submit">
-            Subscribe to monthly newsletter
+          <button className="btn-primary" type="submit">
+            <span>Subscribe to monthly newsletter</span>
           </button>
         </form>
       </section>

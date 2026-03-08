@@ -21,8 +21,8 @@ export function ThankYou() {
           A confirmation email has been sent to <span className="font-bold">{email}</span>. Please open it and click the button inside to confirm your subscription.
         </p>
       </div>
-      <button className="bg-[hsl(var(--blue-800))] text-[hsl(var(--white))] font-bold px-4 py-4 rounded-md" onClick={dismiss}>
-        Dismiss message
+      <button className="btn-primary" type="button" onClick={dismiss}>
+        <span>Dismiss message</span>
       </button>
     </main>
   );

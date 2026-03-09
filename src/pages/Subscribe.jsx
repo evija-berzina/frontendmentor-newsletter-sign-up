@@ -41,7 +41,7 @@ export function Subscribe() {
       <picture className="flex-1 relative w-full">
         <source media="(min-width:1024px)" srcSet={desktopSvg} />
         <source media="(min-width:640px)" srcSet={tabletSvg} />
-        <img src={mobileSvg} alt="Newsletter illustration" className="w-full object-cover" width={375} height={211} fetchPriority="high" />
+        <img src={mobileSvg} alt="Newsletter illustration" className="w-full" width={375} height={284} fetchPriority="high" />
       </picture>
       <section className="flex flex-col flex-1 gap-6 px-6 py-8 lg:justify-center">
         <h1 className="text-4xl font-bold">
@@ -54,19 +54,19 @@ export function Subscribe() {
 
         <ul className="flex flex-col gap-4">
           <li className="flex gap-4 items-start mt-1">
-              <img src={iconSvg} alt="Icon checkmark for list" />
+              <img src={iconSvg} alt="" className="w-5 h-5 shrink-0" />
               <p>
                 Product discovery and building what matters
               </p>
           </li>
           <li className="flex gap-4 items-start mt-1">
-            <img src={iconSvg} alt="Icon checkmark for list" />
+            <img src={iconSvg} alt="" className="w-5 h-5 shrink-0" />
             <p>
               Measuring to ensure updates are a success
             </p>
           </li>
           <li className="flex gap-4 items-start mt-1">
-            <img src={iconSvg} alt="Icon checkmark for list" />
+            <img src={iconSvg} alt="" className="w-5 h-5 shrink-0" />
             <p>
               And much more!
             </p>
